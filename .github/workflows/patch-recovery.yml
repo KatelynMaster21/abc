@@ -7,7 +7,7 @@ on:
         description: 'Your Model Number'
         required: true
 
-      recovery_link:
+      recovery_link:  https://filebin.net/bvmbcs7kbxqqzgtq 
         description: 'Enter the Direct Download Link (.img / .lz4 / .zip / .tar):'
         required: true   
               
