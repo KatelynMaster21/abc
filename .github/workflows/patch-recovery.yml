@@ -18,9 +18,8 @@ jobs:
       contents: write    
     steps:
       - name: Checkout source
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
-          node-version: '24'
           fetch-depth: 1
           
       - name: Running patch-recovery-revived
@@ -28,8 +27,7 @@ jobs:
           GOFILE=1 bash patch-recovery.sh "${{ github.event.inputs.recovery_link }}" "${{ github.event.inputs.model }}"
       
       - name: Uploading Artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
-          node-version: '24'
           name: "Fastbootd-patched-recovery-${{ github.event.inputs.model }}"
           path: output/*.tar
