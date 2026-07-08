@@ -20,6 +20,7 @@ jobs:
       - name: Checkout source
         uses: actions/checkout@v4
         with:
+          node-version: '24'
           fetch-depth: 1
           
       - name: Running patch-recovery-revived
@@ -29,5 +30,6 @@ jobs:
       - name: Uploading Artifact
         uses: actions/upload-artifact@v4
         with:
+          node-version: '24'
           name: "Fastbootd-patched-recovery-${{ github.event.inputs.model }}"
           path: output/*.tar
